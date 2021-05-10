@@ -1,0 +1,108 @@
+﻿
+@{Html.RenderPartial(Url.Content("../UserCategory/Index"));}
+
+<section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+        <h1>Your New Online Presence with Our Website</h1>
+        <h2>Welcome in Our Shopping , We wish you a pleasant shopping</h2>
+        <a href="#portfolio" class="btn-get-started scrollto">Get Started</a>
+    </div>
+</section>
+
+@{Html.RenderPartial("About");}
+
+<section id="counts" class="counts">
+    <div class="container">
+
+        <div class="row counters">
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Clients</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Products</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Support</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Workers</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="why-us" class="why-us">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-right">
+                <div class="content">
+                    <h3>Why Choose ShoppingDo for Shopping?</h3>
+                    <p>
+                        Because We have the best winter and summer offers
+                    </p>
+                    <div class="text-center">
+                        <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 d-flex align-items-stretch">
+                <div class="icon-boxes d-flex flex-column justify-content-center">
+                    <div class="row">
+                        <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bx bx-receipt"></i>
+                                <h4>Summer Offers</h4>
+                                <p>Welcome in Our Shopping , We wish you a pleasant shopping</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bx bx-cube-alt"></i>
+                                <h4>Winter Offers</h4>
+                                <p>Welcome in Our Shopping , We wish you a pleasant shopping</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="icon-box mt-4 mt-xl-0">
+                                <i class="bx bx-images"></i>
+                                <h4>Best Seller</h4>
+                                <p>Welcome in ShoppingDo , We wish you a pleasant shopping</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="cta" class="cta">
+    <div class="container">
+
+        <div class="text-center" data-aos="zoom-in">
+            <h3>Call To Order</h3>
+            <p>Contact us now to order an order for our delivery service</p>
+            <a class="cta-btn" href="#portfolio">Call To Order</a>
+        </div>
+
+    </div>
+</section>
+
+@{Html.RenderPartial(Url.Content("../Products1/Index")); }
+
+@{Html.RenderPartial(Url.Content("../Testimonials/ShowAllTestimonials"));}
+
+@{Html.RenderPartial("Contact");}

@@ -1,0 +1,80 @@
+﻿@model DAL.Product
+
+<div>
+    <hr />
+    <h4 style="color: #009970; text-align:center;font-size:30px">Product</h4>
+    <hr />
+</div>
+
+<div style="margin-left:100px">
+    <ul class="dl-horizontal">
+
+        <li style="margin-bottom:20px;font-weight:bold">
+            @Html.DisplayNameFor(model => model.brand.BrandName) :
+            <span style="font-weight:lighter">
+                @Html.DisplayFor(model => model.brand.BrandName)
+            </span>
+        </li>
+        <li style="margin-bottom:20px;font-weight:bold">
+            @Html.DisplayNameFor(model => model.category.CategoryName) :
+            <span style="font-weight:lighter">
+                @Html.DisplayFor(model => model.category.CategoryName)
+            </span>
+        </li>
+
+        <li style="margin-bottom:20px;font-weight:bold">
+            @Html.DisplayNameFor(model => model.ProductName) :
+            <span style="font-weight:lighter">
+                @Html.DisplayFor(model => model.ProductName)
+            </span>
+        </li>
+
+        <li style="margin-bottom:20px;font-weight:bold">
+            @Html.DisplayNameFor(model => model.price) :
+            <span style="font-weight:lighter">
+                @Html.DisplayFor(model => model.price)
+            </span>
+        </li>
+
+        <li style="margin-bottom:20px;font-weight:bold">
+            @Html.DisplayNameFor(model => model.Description) :
+            <span style="font-weight:lighter">
+                @Html.DisplayFor(model => model.Description)
+            </span>
+        </li>
+
+        <li style="margin-bottom:20px;font-weight:bold">
+            @Html.DisplayNameFor(model => model.Color) :
+            <span style="font-weight:lighter">
+                @Html.DisplayFor(model => model.Color)
+            </span>
+        </li>
+
+        <li style="margin-bottom:20px;font-weight:bold">
+            @Html.DisplayNameFor(model => model.Size) :
+            <span style="font-weight:lighter">
+                @Html.DisplayFor(model => model.Size)
+            </span>
+        </li>
+
+        <li style="margin-bottom:20px;font-weight:bold">
+            @Html.DisplayNameFor(model => model.Image) :
+            <span>
+                <img src="~/Content/img/portfolio/@Model.Image" width="180" height="180" />
+            </span>
+        </li>
+
+        <li style="margin-bottom:20px;font-weight:bold">
+            @Html.DisplayNameFor(model => model.Quantity) :
+            <span style="font-weight:lighter">
+                @Html.DisplayFor(model => model.Quantity)
+            </span>
+        </li>
+
+    </ul>
+</div>
+
+<p style="margin-left:90px ;font-weight:bold">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,38 @@
+﻿@model BL.ViewModel.BrandsViewModel
+
+@*  *@
+<div>
+    <hr />
+    <h4 style="color: #009970; text-align:center;font-size:30px">Create Brand</h4>
+    <hr />
+</div>
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" style="margin-left:400px;width:500px">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <span style="font-weight:bold;color: #009970">Brand Name</span>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BrandName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BrandName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" style="width:385px" />
+            </div>
+        </div>
+    </div>
+}
+<br />
+<div style="margin-left:200px;font-weight:bold">
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<br />
+

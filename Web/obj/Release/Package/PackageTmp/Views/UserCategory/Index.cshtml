@@ -1,0 +1,89 @@
+﻿@model IEnumerable<BL.ViewModel.ProductViewModel>
+@section Styles
+{
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+       /* .fa-stack[data-count]:after {
+            position: absolute;
+            right: 0%;
+            top: 0%;
+            content: attr(data-count);
+            font-size: 40%;
+            padding: .6em;
+            border-radius: 999px;
+            line-height: .75em;
+            color: #009970;
+            text-align: center;
+            min-width: 2em;
+            font-weight: bold;
+            background: white;
+            border-style: solid;*/
+       /* }**/
+
+        span {
+            ​​​​​background-color: #019fbe;
+            padding: 4px 11px;
+            font-weight: bold;
+            color: white;
+            font-size: 22px;
+        }
+
+        /*​​​​​
+
+
+        /*.fa-circle {
+            color: #009970;
+        }
+
+        .green-cart {
+            color: #009970;
+            background: white;
+        }*/
+    </style>
+}
+
+<header id="header" class=" d-flex align-items-center">
+    <div class="container">
+        <div class="header-container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <h1 class="text-light"><a href="index.html"><span>ShoppingDo</span></a></h1>
+            </div>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto " href="#portfolio">Products</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Categories</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            @foreach (var item in ViewBag.cats)
+                            {
+                                <li><a href="#portfolio">@item.CategoryName</a></li>
+                            }
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    @if (User.Identity.IsAuthenticated == false)
+                    {
+                        <li><a class="getstarted scrollto" href="/Account/Login">Sign in</a></li>
+                    }
+                    else
+                    {
+                <li>
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart">0</span>
+                    <input type="hidden" id="hiddenInput" name="numberofaddresses" value="2">
+                    @*<span class="fa-stack fa-2x has-badge" data-count="5" id="Quantity">
+            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+            <i style="" class="fa fa-shopping-cart fa-stack-2x green-cart"></i>
+        </span>*@
+                </li>
+                        @*<li><a class="nav-link scrollto " href="@Url.Action("", "")">Cart</a></li>*@
+                        <li><a class="nav-link scrollto " href="@Url.Action("Logout", "Account")">Logout</a></li>
+                    }
+                    <li class="bi bi-list mobile-nav-toggle"></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BL.ViewModel.RegisterViewModel>
+
+
+<h2 class="text-center" style="margin-top:60px">Users With This Account</h2>
+
+
+<table class="table table-striped" id="usersDetails">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNo)
+            </th>
+
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNo)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+<br />
+<br />
+<div style="margin-left:30px;font-weight:bold">
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

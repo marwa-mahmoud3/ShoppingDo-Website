@@ -1,0 +1,81 @@
+﻿@model IEnumerable<DAL.Product>
+
+@section styles{
+    <style>
+        th {
+            color: #009970;
+            font-size: 15px;
+        }
+
+        #pro {
+            padding-top: 100px
+        }
+    </style>
+}
+<div>
+    <hr />
+    <h4 style="color: #009970; text-align:center;font-size:30px;margin-top:10px">All Products</h4>
+    <hr />
+</div>
+
+<p style="margin-left:60px;font-weight:bold;font-size:20px">
+    @Html.ActionLink("Add New Product", "Create")
+</p>
+
+<table class="table" style="width:1100px;margin-left:70px">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td id="pro">
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td id="pro">
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+
+            <td id="pro">
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td id="pro">
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+                <img src="~/Content/img/portfolio/@item.Image" width="180" height="180" />
+            </td>
+            <td id="pro">
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+
+            <th id="pro">
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </th>
+        </tr>
+    }
+
+</table>
