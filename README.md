@@ -1,4 +1,6 @@
-# Ecommerce-Website-Asp-.net-Mvc-
+# ShoppingDo Ecommerce-Website
+Technologies used: Asp .Net MVC, Angular Framework.
+
 ![Home](https://user-images.githubusercontent.com/58340861/123695255-9f86cd00-d85a-11eb-8f7a-65c14da2791b.PNG)
 ![6](https://user-images.githubusercontent.com/58340861/123695318-b3caca00-d85a-11eb-80af-874f661ba7ad.PNG)
 ![7](https://user-images.githubusercontent.com/58340861/123695376-c218e600-d85a-11eb-9167-177fb773b343.PNG)
